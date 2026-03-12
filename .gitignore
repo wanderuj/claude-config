@@ -1,0 +1,25 @@
+# Cache and transient data
+.DS_Store
+cache/
+debug/
+downloads/
+file-history/
+shell-snapshots/
+session-env/
+stats-cache.json
+mcp-needs-auth-cache.json
+telemetry/
+statsig/
+usage-data/
+backups/
+plans/
+
+# History and state
+history.jsonl
+todos/
+
+# Project-specific memory (lives with each project)
+projects/
+
+# Plugins (installed separately)
+plugins/
