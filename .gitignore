@@ -17,6 +17,7 @@ plans/
 # History and state
 history.jsonl
 todos/
+sessions/
 
 # Project-specific memory (lives with each project)
 projects/
