@@ -60,7 +60,7 @@ gh api graphql -f query='
 Piece together the current state:
 
 - **Review status** — who has approved, who requested changes, who is still pending
-- **Open threads** — unresolved conversations that need attention, grouped by reviewer
+- **Open threads** — unresolved conversations that need attention, grouped by reviewer. **Preserve the substance of each comment** — include the specific fields, files, and concerns the reviewer raised. Don't paraphrase a detailed comment down to a vague one-liner; the operator needs to see what the reviewer actually said without going back to GitHub.
 - **Resolved threads** — briefly summarize what was discussed and resolved (these reveal the PR's history and can surface patterns)
 - **CI status** — are checks passing?
 - **Merge readiness** — conflicts, review requirements, blocking issues
