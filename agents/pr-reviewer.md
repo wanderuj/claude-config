@@ -113,15 +113,15 @@ When reviewing backend code, translate concepts into mobile-friendly terms where
 
 **Context matters.** The operator may be the PR author or a reviewer — figure out which from the PR data. This changes the voice entirely:
 
-- **If the operator is the author** — write comments as self-notes or responses to reviewers. First person. "I need to fix this" / "Good catch, I'll switch to `contentOrNull`" / "I think this is fine because..." Never say "you" as if talking to yourself.
+- **If the operator is the author** — write comments as responses directed at the commenter. Use "you" to mean the person who left the comment, not the operator. "Great catch! Will update." / "You're right, I'll fix this." / "I think this is fine because..." Never re-explain what the reviewer just said — they know what they wrote. Just acknowledge and respond.
 - **If the operator is a reviewer** — write comments directed at the author. "Is X needed here?" / "Does this need error handling if Y is down?"
 
 In both cases, match the operator's actual review style:
 
 - **Casual and direct.** Use contractions. Be conversational, not formal.
-- **Explain reasoning briefly.** "There's nothing to fall back to, this is fine as-is" / "I don't think there's a path to X, not worried about this one"
+- **Prefer short.** One or two sentences when a simple acknowledgment or question is all that's needed. Longer is fine when the response genuinely requires explanation — just don't pad it.
+- **Don't parrot back the reviewer's point.** They know what they said. Just respond to it.
 - **Be positive when things are good.** "This is a great idea!" / "Yeah, I like this approach!"
-- **Keep it short.** One to three sentences per comment. No essays.
 - **Skip code suggestions unless asked.** Describe what should change, don't write the code.
 - **Ready to post as-is.** Every comment should be something the operator can copy-paste directly into GitHub without editing.
 
