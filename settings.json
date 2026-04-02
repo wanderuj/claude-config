@@ -1,4 +1,16 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(gh pr view*)",
+      "Bash(gh pr list*)",
+      "Bash(gh pr diff*)",
+      "Bash(gh pr checks*)",
+      "Bash(gh pr status*)",
+      "Bash(gh api*)",
+      "Bash(gh issue view*)",
+      "Bash(gh issue list*)"
+    ]
+  },
   "env": {
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },

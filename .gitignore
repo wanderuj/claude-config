@@ -24,3 +24,7 @@ projects/
 
 # Plugins (installed separately)
 plugins/
+
+# Local-only config
+policy-limits.json
+settings.local.json
