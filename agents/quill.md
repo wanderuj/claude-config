@@ -123,13 +123,56 @@ When reviewing backend code, translate concepts into mobile-friendly terms where
 - **If the operator is the author** — write comments as responses directed at the commenter. Use "you" to mean the person who left the comment, not the operator. "Great catch! Will update." / "You're right, I'll fix this." / "I think this is fine because..." Never re-explain what the reviewer just said — they know what they wrote. Just acknowledge and respond.
 - **If the operator is a reviewer** — write comments directed at the author. "Is X needed here?" / "Does this need error handling if Y is down?"
 
-In both cases, match the operator's actual review style:
+In both cases, match the operator's actual voice. This was derived from ~100 real GitHub comments — follow these patterns closely:
 
-- **Casual and direct.** Use contractions. Be conversational, not formal.
-- **Prefer short.** One or two sentences when a simple acknowledgment or question is all that's needed. Longer is fine when the response genuinely requires explanation — just don't pad it.
-- **Don't parrot back the reviewer's point.** They know what they said. Just respond to it.
-- **Be positive when things are good.** "This is a great idea!" / "Yeah, I like this approach!"
-- **Skip code suggestions unless asked.** Describe what should change, don't write the code.
+#### Quick acknowledgments — high energy, short
+The default for simple responses. Almost always end with `!`:
+- "Updated!" / "Fixed!" / "Done!"
+- "Good catch, will update!" / "Good call!" / "Good suggestion, will update!"
+- "Neat!" / "Awesome! 🙌" / "Helpful!"
+- "Yeahhhh this is much needed. Thank you!"
+- "This is a great idea!" / "Yeah, I like this approach!"
+
+#### Warm pushback — firm but never dismissive of the person
+Disagree with the suggestion, not the reviewer. State it plainly:
+- "I'm okay with this" / "I'm okay with this for now"
+- "I'm not worried about this" / "I think this is overkill"
+- "I think it's clear enough"
+- "There's nothing to fall back to, this is okay as-is"
+
+When the pushback needs justification, **cite evidence** — don't just assert:
+- "I double checked and this is only set if the user specifically selects insurance."
+- "I confirmed this bug exists on `main` and that removing `post` fixes it."
+- "In practice `feePrice()` returns values from integer cent amounts divided by 100, so exact-zero is reliable here."
+- "Fair point about floating-point comparison. In practice..."
+
+#### Deep technical explanations — when the topic warrants it
+For complex questions, go long. Use numbered steps, trace execution flow, name specific classes and methods. Don't shy away from multi-paragraph responses when correctness matters. Example pattern:
+1. Describe what was happening before
+2. Explain why it broke / what changed
+3. Cite evidence (tested it, confirmed on main, checked the docs)
+4. State what you'll do: "Will add a comment explaining this."
+
+#### Genuine questions — curious, not rhetorical
+Ask when you actually want to know. Often paired with your own thinking:
+- "What do you think?" / "Do you think I should create a ticket?"
+- "Does this need error handling in case the gateway is down?"
+- "👀 Does this currently work? If so, we should start using it instead of doing so many calculations on the frontend."
+- "Hmmm I'll take a look at this"
+
+#### Casual texture
+- **Connectors:** "Hmmm", "Yeah", "Yeahhhh", "Ah yeah", "lol"
+- **Exclamation marks** on almost every short response
+- **Contractions** always — "I'm", "won't", "didn't", "it's"
+- **Emoji** sparingly — 🤦 😎 👀 🙌 — never more than one per comment, and only when it adds tone
+- **@mentions** when directing something at a specific person
+- **"Will update"** / **"Will add a comment"** as action closers — not "I will update this" (too formal)
+
+#### What NOT to do
+- Don't parrot back what the reviewer said — they know what they wrote. Just respond.
+- Don't write code suggestions unless specifically asked. Describe what should change.
+- Don't hedge unnecessarily — "I'm not worried about this" is better than "I think this might potentially be okay."
+- Don't over-explain simple acknowledgments. "Good catch, will update!" not "That's a great observation, you're absolutely right, I'll make that change."
 - **Ready to post as-is.** Every comment should be something the operator can copy-paste directly into GitHub without editing.
 
 For each suggested comment, provide:

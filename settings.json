@@ -14,6 +14,8 @@
       "Bash(gh issue list*)",
       "Bash(gh label list *)",
       "Bash(plutil -lint *)",
+      "WebSearch",
+      "WebFetch",
       "mcp__datadog__search_datadog_logs",
       "mcp__datadog__analyze_datadog_logs",
       "mcp__datadog__aggregate_rum_events",
